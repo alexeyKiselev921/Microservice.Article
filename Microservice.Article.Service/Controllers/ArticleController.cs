@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microservice.Article.Service.Models;
+using Microservice.Article.Service.Resolvers;
 using Microservice.Article.Service.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,10 +16,12 @@ namespace Microservice.Article.Service.Controllers
     public class ArticleController : ControllerBase
     {
         private readonly IArticleService _articleService;
+        private readonly JsonSerializerSettings _jsonSerializerSettings;
 
         public ArticleController(IArticleService service)
         {
             _articleService = service;
+            _jsonSerializerSettings = new JsonSerializerSettings() {ContractResolver = new LowercaseContractResolver()};
         }
 
         // GET: api/Article
@@ -40,7 +43,7 @@ namespace Microservice.Article.Service.Controllers
                     return JsonConvert.SerializeObject("No article found");
                 }
 
-                return JsonConvert.SerializeObject(user);
+                return JsonConvert.SerializeObject(user, Formatting.Indented, _jsonSerializerSettings);
             }
             catch (Exception e)
             {

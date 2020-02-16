@@ -11,4 +11,3 @@ C:\localprjgithub\Microservice.Article\Microservice.Article.Service\obj\Debug\ne
 C:\localprjgithub\Microservice.Article\Microservice.Article.Service\bin\Debug\netcoreapp2.2\Microservice.Article.Service.pdb
 C:\localprjgithub\Microservice.Article\Microservice.Article.Service\obj\Debug\netcoreapp2.2\Microservice.Article.Service.dll
 C:\localprjgithub\Microservice.Article\Microservice.Article.Service\obj\Debug\netcoreapp2.2\Microservice.Article.Service.pdb
-C:\localprjgithub\Microservice.Article\Microservice.Article.Service\obj\Debug\netcoreapp2.2\Microservice.Article.Service.csprojAssemblyReference.cache
