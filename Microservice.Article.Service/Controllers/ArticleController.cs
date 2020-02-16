@@ -75,9 +75,8 @@ namespace Microservice.Article.Service.Controllers
         }
 
         // PUT: api/Article/5
-        [HttpPut]
-        [Route("update")]
-        public async Task<IActionResult> Put(ArticleModel model)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(string id, [FromBody]ArticleModel model)
         {
             try
             {
