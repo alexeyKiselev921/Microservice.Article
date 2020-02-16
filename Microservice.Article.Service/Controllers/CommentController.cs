@@ -30,7 +30,7 @@ namespace Microservice.Article.Service.Controllers
         }
 
         // GET: api/Article/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetComment")]
         [Route("getById")]
         public async Task<string> Get(string id)
         {
