@@ -31,7 +31,6 @@ namespace Microservice.Article.Service.Controllers
 
         // GET: api/Article/5
         [HttpGet("{id}", Name = "GetComment")]
-        [Route("getById")]
         public async Task<string> Get(string id)
         {
             try
