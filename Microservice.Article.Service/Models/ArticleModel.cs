@@ -13,6 +13,6 @@ namespace Microservice.Article.Service.Models
         public string Content { get; set; }
         public string CreatedUser { get; set; }
         public string Category { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public DateTime? CreatedDate { get; set; }
     }
 }

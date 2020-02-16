@@ -25,7 +25,7 @@ namespace Microservice.Article.Service.Services
 
         public async Task<CommentModel> Get(string commentId)
         {
-            var filter = Builders<CommentModel>.Filter.Eq("id", commentId);
+            var filter = Builders<CommentModel>.Filter.Eq("Id", commentId);
             return await _repository.Comments.Find(filter).FirstOrDefaultAsync();
         }
 
@@ -36,7 +36,7 @@ namespace Microservice.Article.Service.Services
 
         public async Task<bool> Update(CommentModel comment)
         {
-            var filter = Builders<CommentModel>.Filter.Eq("id", comment.Id);
+            var filter = Builders<CommentModel>.Filter.Eq("Id", comment.Id);
             var updatingUser = _repository.Comments.Find(filter).FirstOrDefaultAsync();
             if (updatingUser.Result == null)
                 return false;
@@ -50,7 +50,7 @@ namespace Microservice.Article.Service.Services
 
         public async Task<DeleteResult> Remove(string commentId)
         {
-            var filter = Builders<ArticleModel>.Filter.Eq("id", commentId);
+            var filter = Builders<ArticleModel>.Filter.Eq("Id", commentId);
             return await _repository.Articles.DeleteOneAsync(filter);
         }
 

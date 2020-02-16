@@ -24,7 +24,7 @@ namespace Microservice.Article.Service.Services
 
         public async Task<ArticleModel> Get(string articleId)
         {
-            var filter = Builders<ArticleModel>.Filter.Eq("id", articleId);
+            var filter = Builders<ArticleModel>.Filter.Eq("Id", articleId);
             return await _repository.Articles.Find(filter).FirstOrDefaultAsync();
         }
 
@@ -35,7 +35,7 @@ namespace Microservice.Article.Service.Services
 
         public async Task<bool> Update(ArticleModel article)
         {
-            var filter = Builders<ArticleModel>.Filter.Eq("id", article.Id);
+            var filter = Builders<ArticleModel>.Filter.Eq("Id", article.Id);
             var updatingUser = _repository.Articles.Find(filter).FirstOrDefaultAsync();
             if (updatingUser.Result == null)
                 return false;
@@ -50,7 +50,7 @@ namespace Microservice.Article.Service.Services
 
         public async Task<DeleteResult> Remove(string articleId)
         {
-            var filter = Builders<ArticleModel>.Filter.Eq("id", articleId);
+            var filter = Builders<ArticleModel>.Filter.Eq("Id", articleId);
             return await _repository.Articles.DeleteOneAsync(filter);
         }
 
