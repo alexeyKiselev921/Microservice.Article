@@ -62,7 +62,7 @@ namespace Microservice.Article.Service.Controllers
                 if (string.IsNullOrEmpty(model.Category))
                     return BadRequest("Please category");
 
-                model.CreationDate = DateTime.Now;
+                model.CreatedDate = DateTime.Now;
                 await _articleService.Create(model);
                 return Ok("Article has been added successfully");
             }

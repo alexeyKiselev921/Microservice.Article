@@ -43,7 +43,7 @@ namespace Microservice.Article.Service.Services
                 .Set(x => x.Content, article.Content)
                 .Set(x=> x.Title, article.Title)
                 .Set(x => x.Category, article.Category)
-                .Set(x => x.User, article.User);
+                .Set(x => x.CreatedUser, article.CreatedUser);
             await _repository.Articles.UpdateOneAsync(filter, update);
             return true;
         }
