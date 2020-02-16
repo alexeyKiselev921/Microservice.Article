@@ -11,8 +11,8 @@ namespace Microservice.Article.Service.Models
         public string Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public string User { get; set; }
+        public string CreatedUser { get; set; }
         public string Category { get; set; }
-        public DateTime CreationDate { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }

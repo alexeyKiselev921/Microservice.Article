@@ -60,6 +60,8 @@ namespace Microservice.Article.Service
                 app.UseHsts();
             }
 
+            app.UseCors();
+
             app.UseHttpsRedirection();
             app.UseMvc();
         }
