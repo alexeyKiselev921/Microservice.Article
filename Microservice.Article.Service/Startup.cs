@@ -45,7 +45,10 @@ namespace Microservice.Article.Service
 
             services.AddTransient<IArticleService, ArticleService>();
             services.AddTransient<ICommentService, CommentService>();
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowPolicy", builder => builder.AllowAnyHeader());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
