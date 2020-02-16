@@ -12,4 +12,3 @@ C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\obj\Debug\netc
 C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\obj\Debug\netcoreapp2.1\Microservice.Article.Tests.AssemblyInfo.cs
 C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\obj\Debug\netcoreapp2.1\Microservice.Article.Tests.dll
 C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\obj\Debug\netcoreapp2.1\Microservice.Article.Tests.pdb
-C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\obj\Debug\netcoreapp2.1\Microservice.Article.Tests.csprojAssemblyReference.cache

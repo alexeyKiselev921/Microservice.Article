@@ -47,7 +47,7 @@ namespace Microservice.Article.Service
             services.AddTransient<ICommentService, CommentService>();
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowPolicy", builder => builder.AllowAnyHeader());
+                options.AddPolicy("AllowPolicy", builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             });
         }
 
@@ -64,7 +64,7 @@ namespace Microservice.Article.Service
                 app.UseHsts();
             }
 
-            app.UseCors(builder => builder.AllowAnyHeader());
+            app.UseCors("AllowPolicy");
 
             app.UseHttpsRedirection();
             app.UseMvc();
