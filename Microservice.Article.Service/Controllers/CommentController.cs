@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microservice.Article.Service.Models;
+using Microservice.Article.Service.Resolvers;
 using Microservice.Article.Service.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,10 +17,12 @@ namespace Microservice.Article.Service.Controllers
     {
         // GET: api/Comment
         private readonly ICommentService _commentService;
+        private readonly JsonSerializerSettings _jsonSerializerSettings;
 
         public CommentController(ICommentService service)
         {
             _commentService = service;
+            _jsonSerializerSettings = new JsonSerializerSettings() { ContractResolver = new LowercaseContractResolver() };
         }
 
         // GET: api/Article
@@ -35,13 +38,13 @@ namespace Microservice.Article.Service.Controllers
         {
             try
             {
-                var user = await _commentService.Get(id);
-                if (user == null)
+                var comment = await _commentService.Get(id);
+                if (comment == null)
                 {
                     return JsonConvert.SerializeObject("No comment found");
                 }
 
-                return JsonConvert.SerializeObject(user);
+                return JsonConvert.SerializeObject(comment, Formatting.Indented, _jsonSerializerSettings);
             }
             catch (Exception e)
             {

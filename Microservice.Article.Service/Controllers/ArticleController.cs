@@ -37,13 +37,13 @@ namespace Microservice.Article.Service.Controllers
         {
             try
             {
-                var user = await _articleService.Get(id);
-                if (user == null)
+                var article = await _articleService.Get(id);
+                if (article == null)
                 {
                     return JsonConvert.SerializeObject("No article found");
                 }
 
-                return JsonConvert.SerializeObject(user, Formatting.Indented, _jsonSerializerSettings);
+                return JsonConvert.SerializeObject(article, Formatting.Indented, _jsonSerializerSettings);
             }
             catch (Exception e)
             {
