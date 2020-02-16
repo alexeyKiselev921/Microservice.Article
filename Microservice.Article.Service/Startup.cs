@@ -45,6 +45,7 @@ namespace Microservice.Article.Service
 
             services.AddTransient<IArticleService, ArticleService>();
             services.AddTransient<ICommentService, CommentService>();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,7 +61,7 @@ namespace Microservice.Article.Service
                 app.UseHsts();
             }
 
-            app.UseCors();
+            app.UseCors(builder => builder.AllowAnyHeader());
 
             app.UseHttpsRedirection();
             app.UseMvc();
