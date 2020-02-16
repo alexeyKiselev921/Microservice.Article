@@ -11,11 +11,11 @@ namespace Microservice.Article.Service.Services
 {
     public class ArticleService : IArticleService
     {
-        private readonly MongoRepository _repository = null;
+        private readonly ArticleRepository _repository = null;
 
         public ArticleService(IOptions<ArticleDbContext> settings)
         {
-            _repository = new MongoRepository(settings, null);
+            _repository = new ArticleRepository(settings);
         }
         public async Task<IEnumerable<ArticleModel>> GetAll()
         {

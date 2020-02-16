@@ -11,11 +11,11 @@ namespace Microservice.Article.Service.Services
 {
     public class CommentService : ICommentService
     {
-        private readonly MongoRepository _repository = null;
+        private readonly CommentRepository _repository = null;
 
         public CommentService(IOptions<CommentDbContext> settings)
         {
-            _repository = new MongoRepository(null, settings);
+            _repository = new CommentRepository(settings);
         }
 
         public async Task<IEnumerable<CommentModel>> GetAll()
