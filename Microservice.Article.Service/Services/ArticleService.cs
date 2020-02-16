@@ -41,6 +41,7 @@ namespace Microservice.Article.Service.Services
                 return false;
             var update = Builders<ArticleModel>.Update
                 .Set(x => x.Content, article.Content)
+                .Set(x=> x.Title, article.Title)
                 .Set(x => x.Category, article.Category)
                 .Set(x => x.User, article.User);
             await _repository.Articles.UpdateOneAsync(filter, update);

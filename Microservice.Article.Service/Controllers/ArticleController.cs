@@ -57,6 +57,8 @@ namespace Microservice.Article.Service.Controllers
             {
                 if (string.IsNullOrEmpty(model.Content))
                     return BadRequest("Please content");
+                if (string.IsNullOrEmpty(model.Title))
+                    return BadRequest("Please add title");
                 if (string.IsNullOrEmpty(model.Category))
                     return BadRequest("Please category");
 
@@ -79,6 +81,8 @@ namespace Microservice.Article.Service.Controllers
             {
                 if (string.IsNullOrEmpty(model.Content))
                     return BadRequest("Please content");
+                if (string.IsNullOrEmpty(model.Title))
+                    return BadRequest("Please add title");
                 if (string.IsNullOrEmpty(model.Category))
                     return BadRequest("Please category");
                 var result = await _articleService.Update(model);

@@ -9,6 +9,7 @@ namespace Microservice.Article.Service.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
+        public string Title { get; set; }
         public string Content { get; set; }
         public string User { get; set; }
         public string Category { get; set; }
