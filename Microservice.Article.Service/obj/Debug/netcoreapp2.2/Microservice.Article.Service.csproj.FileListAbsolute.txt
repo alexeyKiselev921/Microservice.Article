@@ -2,7 +2,6 @@ C:\localprjgithub\Microservice.Article\Microservice.Article.Service\bin\Debug\ne
 C:\localprjgithub\Microservice.Article\Microservice.Article.Service\bin\Debug\netcoreapp2.2\Microservice.Article.Service.runtimeconfig.json
 C:\localprjgithub\Microservice.Article\Microservice.Article.Service\bin\Debug\netcoreapp2.2\Microservice.Article.Service.runtimeconfig.dev.json
 C:\localprjgithub\Microservice.Article\Microservice.Article.Service\bin\Debug\netcoreapp2.2\Microservice.Article.Service.dll
-C:\localprjgithub\Microservice.Article\Microservice.Article.Service\obj\Debug\netcoreapp2.2\Microservice.Article.Service.csprojAssemblyReference.cache
 C:\localprjgithub\Microservice.Article\Microservice.Article.Service\obj\Debug\netcoreapp2.2\Microservice.Article.Service.csproj.CoreCompileInputs.cache
 C:\localprjgithub\Microservice.Article\Microservice.Article.Service\obj\Debug\netcoreapp2.2\Microservice.Article.Service.RazorAssemblyInfo.cache
 C:\localprjgithub\Microservice.Article\Microservice.Article.Service\obj\Debug\netcoreapp2.2\Microservice.Article.Service.RazorAssemblyInfo.cs
