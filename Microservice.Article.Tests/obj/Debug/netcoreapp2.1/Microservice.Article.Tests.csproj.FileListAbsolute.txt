@@ -1,0 +1,15 @@
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\bin\Debug\netcoreapp2.1\nunit.engine.netstandard.dll
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\bin\Debug\netcoreapp2.1\Mono.Cecil.dll
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\bin\Debug\netcoreapp2.1\Microservice.Article.Tests.deps.json
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\bin\Debug\netcoreapp2.1\Microservice.Article.Tests.runtimeconfig.json
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\bin\Debug\netcoreapp2.1\Microservice.Article.Tests.runtimeconfig.dev.json
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\bin\Debug\netcoreapp2.1\Microservice.Article.Tests.dll
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\bin\Debug\netcoreapp2.1\Microservice.Article.Tests.pdb
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\obj\Debug\netcoreapp2.1\Microservice.Article.Tests.csprojAssemblyReference.cache
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\obj\Debug\netcoreapp2.1\Microservice.Article.Tests.csproj.CoreCompileInputs.cache
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\obj\Debug\netcoreapp2.1\Microservice.Article.Tests.AssemblyInfoInputs.cache
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\obj\Debug\netcoreapp2.1\Microservice.Article.Tests.AssemblyInfo.cs
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\obj\Debug\netcoreapp2.1\Microservice.Article.Tests.dll
+C:\localprjgithub\Microservice.Article\Microservice.Article.Tests\obj\Debug\netcoreapp2.1\Microservice.Article.Tests.pdb

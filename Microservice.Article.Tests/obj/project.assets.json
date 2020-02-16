@@ -2856,12 +2856,11 @@
       ]
     },
     "System.Collections.NonGeneric/4.3.0": {
-      "sha512": "/D3jtX0+u5+6rS3RGvTMyICPpIuzBgqtUYLjK1aXLua0nWH4JpM1H/tRk1Uxs6Fo0fe22jyJaTpoXPSu0il8Ug==",
+      "sha512": "prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
       "type": "package",
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5757,11 +5756,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\localproj\\Microservice.Article\\Microservice.Article.Tests\\Microservice.Article.Tests.csproj",
+      "projectUniqueName": "C:\\localprjgithub\\Microservice.Article\\Microservice.Article.Tests\\Microservice.Article.Tests.csproj",
       "projectName": "Microservice.Article.Tests",
-      "projectPath": "C:\\localproj\\Microservice.Article\\Microservice.Article.Tests\\Microservice.Article.Tests.csproj",
+      "projectPath": "C:\\localprjgithub\\Microservice.Article\\Microservice.Article.Tests\\Microservice.Article.Tests.csproj",
       "packagesPath": "C:\\Users\\akisialev\\.nuget\\packages\\",
-      "outputPath": "C:\\localproj\\Microservice.Article\\Microservice.Article.Tests\\obj\\",
+      "outputPath": "C:\\localprjgithub\\Microservice.Article\\Microservice.Article.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
