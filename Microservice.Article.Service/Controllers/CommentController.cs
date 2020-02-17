@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace Microservice.Article.Service.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/article")]
     [ApiController]
     public class CommentController : ControllerBase
     {
@@ -27,18 +27,20 @@ namespace Microservice.Article.Service.Controllers
 
         // GET: api/Article
         [HttpGet]
-        public Task<IEnumerable<CommentModel>> Get()
+        [Route("{articleId}/comments")]
+        public Task<IEnumerable<CommentModel>> Get(string articleId)
         {
-            return _commentService.GetAll();
+            return _commentService.GetAll(articleId);
         }
 
         // GET: api/Article/5
         [HttpGet("{id}", Name = "GetComment")]
-        public async Task<string> Get(string id)
+        [Route("{articleId}/comment/{id}")]
+        public async Task<string> Get(string id, string articleId)
         {
             try
             {
-                var comment = await _commentService.Get(id);
+                var comment = await _commentService.Get(articleId, id);
                 if (comment == null)
                 {
                     return JsonConvert.SerializeObject("No comment found");
@@ -54,7 +56,8 @@ namespace Microservice.Article.Service.Controllers
 
         // POST: api/Article
         [HttpPost]
-        public async Task<IActionResult> Post(CommentModel model)
+        [Route("{articleId}/createComment")]
+        public async Task<IActionResult> Post(string articleId, CommentModel model)
         {
             try
             {
@@ -71,7 +74,8 @@ namespace Microservice.Article.Service.Controllers
 
         // PUT: api/Article/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(string id, [FromBody]CommentModel model)
+        [Route("{articleId}/editComment/{id}")]
+        public async Task<IActionResult> Put(string articleId, [FromBody]CommentModel model)
         {
             try
             {
@@ -93,7 +97,8 @@ namespace Microservice.Article.Service.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(string id)
+        [Route("{articleId}/deleteComment/{id}")]
+        public async Task<IActionResult> Delete(string articleId, string id)
         {
             try
             {
@@ -107,12 +112,12 @@ namespace Microservice.Article.Service.Controllers
         }
 
         [HttpDelete]
-        [Route("deleteAll")]
-        public IActionResult DeleteAll()
+        [Route("{articleId}/deleteAllComments")]
+        public IActionResult DeleteAll(string articleId)
         {
             try
             {
-                _commentService.RemoveAll();
+                _commentService.RemoveAll(articleId);
                 return Ok("All comments has been deleted successfully");
             }
             catch (Exception e)

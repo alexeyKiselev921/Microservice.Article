@@ -11,7 +11,6 @@ namespace Microservice.Article.Service.Models
         public string Id { get; set; }
         public string CommentText { get; set; }
         public string Author { get; set; }
-        [BsonRepresentation(BsonType.ObjectId)]
         public string ArticleId { get; set; }
         public DateTime CommentDate { get; set; }
     }

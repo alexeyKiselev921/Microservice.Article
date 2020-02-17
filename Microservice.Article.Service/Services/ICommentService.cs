@@ -7,11 +7,11 @@ namespace Microservice.Article.Service.Services
 {
     public interface ICommentService
     {
-        Task<IEnumerable<CommentModel>> GetAll();
-        Task<CommentModel> Get(string commentId);
+        Task<IEnumerable<CommentModel>> GetAll(string articleId);
+        Task<CommentModel> Get(string articleId, string commentId);
         Task Create(CommentModel comment);
         Task<bool> Update(CommentModel comment);
         Task<DeleteResult> Remove(string commentId);
-        Task<DeleteResult> RemoveAll();
+        Task<DeleteResult> RemoveAll(string articleId);
     }
 }

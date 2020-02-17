@@ -18,14 +18,16 @@ namespace Microservice.Article.Service.Services
             _repository = new CommentRepository(settings);
         }
 
-        public async Task<IEnumerable<CommentModel>> GetAll()
+        public async Task<IEnumerable<CommentModel>> GetAll(string articleId)
         {
-            return await _repository.Comments.Find(x => true).ToListAsync();
+            var filter = Builders<CommentModel>.Filter.Eq("ArticleId", articleId);
+            return await _repository.Comments.Find(filter).ToListAsync();
         }
 
-        public async Task<CommentModel> Get(string commentId)
+        public async Task<CommentModel> Get(string articleId, string commentId)
         {
             var filter = Builders<CommentModel>.Filter.Eq("Id", commentId);
+            filter = filter & Builders<CommentModel>.Filter.Eq("ArticleId", articleId);
             return await _repository.Comments.Find(filter).FirstOrDefaultAsync();
         }
 
@@ -50,13 +52,14 @@ namespace Microservice.Article.Service.Services
 
         public async Task<DeleteResult> Remove(string commentId)
         {
-            var filter = Builders<ArticleModel>.Filter.Eq("Id", commentId);
-            return await _repository.Articles.DeleteOneAsync(filter);
+            var filter = Builders<CommentModel>.Filter.Eq("Id", commentId);
+            return await _repository.Comments.DeleteOneAsync(filter);
         }
 
-        public async Task<DeleteResult> RemoveAll()
+        public async Task<DeleteResult> RemoveAll(string articleId)
         {
-            return await _repository.Articles.DeleteManyAsync(new BsonDocument()); ;
+            var filter = Builders<CommentModel>.Filter.Eq("ArticleId", articleId);
+            return await _repository.Comments.DeleteManyAsync(filter); 
         }
     }
 }
