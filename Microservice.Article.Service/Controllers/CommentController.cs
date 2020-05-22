@@ -102,7 +102,7 @@ namespace Microservice.Article.Service.Controllers
         {
             try
             {
-                await _commentService.Remove(id);
+                //await _commentService.Remove(id);
                 return Ok("Comment has been deleted successfully");
             }
             catch (Exception e)
@@ -117,7 +117,7 @@ namespace Microservice.Article.Service.Controllers
         {
             try
             {
-                _commentService.RemoveAll(articleId);
+                //_commentService.RemoveAll(articleId);
                 return Ok("All comments has been deleted successfully");
             }
             catch (Exception e)
