@@ -63,7 +63,7 @@ namespace Microservice.Article.Service.Controllers
             {
                 if (string.IsNullOrEmpty(model.CommentText))
                     return BadRequest("Please add comment text");
-                //await _commentService.Create(model);
+                await _commentService.Create(model);
                 return Ok("Comment has been added successfully");
             }
             catch (Exception e)
